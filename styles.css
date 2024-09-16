@@ -1,0 +1,317 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+img{
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  font-family: Lexend;
+  background: linear-gradient(60deg, #141414, #1C1C1C);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  cursor:url(Images/Cursor.png), auto;
+}
+
+.parent{
+  display: flex;
+  flex-direction: row;
+  height: 95vh;
+}
+
+.sidebar{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+  color: white;
+  background: linear-gradient(120deg, #0D0D0D, #141414, #1C1C1C, #242424, #202020);
+  height: 100vh;
+  flex: 1;
+  max-width: 220px;
+  min-width: 180px;
+}
+
+.grid{
+  display: grid;
+  height: inherit;
+  flex: 4;
+  grid-template-areas:
+  'quote wallpaper wallpaper wallpaper'
+  'profile wallpaper wallpaper wallpaper'
+  'profile wallpaper wallpaper wallpaper'
+  'tools tools tools tools'
+  'tools tools tools tools'
+  'tools tools tools tools'
+  'tools tools tools tools'
+  'tools tools tools tools'
+  'tools tools tools tools'
+  'tools tools tools tools'
+  'tools tools tools tools';
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  gap: 1rem 1rem;
+}
+
+h1{
+  margin: 1.75rem;
+}
+
+.quote{
+  grid-area: quote;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quote-container{
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.profile{
+  grid-area: profile;
+  overflow: hidden;
+}
+
+.wallpaper{
+  grid-area: wallpaper;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+}
+.wallpaper-container{
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: url(Images/Wallpaper.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.tools{
+  grid-area: tools;
+  margin-bottom: 2.5rem;
+}
+
+.quote, .profile, .wallpaper, .tools{
+  background: linear-gradient(120deg, #0D0D0D, #141414, #1C1C1C, #242424, #202020);
+  border-radius: 16px;
+  overflow: hidden;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 5px 10px rgba(13, 13, 13, 0.35);
+}
+
+.profile-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.profile-picture-container{
+  display: flex;
+  width: 4.5rem;
+  border-radius: 9rem;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.socials-container{
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+
+.cursor{
+  cursor: pointer;
+}
+
+.profile-parent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  line-height: 1.25rem;
+}
+
+.profile-description{
+  margin-top: 10px;
+}
+
+.gray{
+  color: #EBEBEB;
+  font-size: 0.75rem;
+}
+
+.hightlight {
+  font-size: 2.5rem;
+}
+
+.socials{
+  font-size: 2.5rem;
+  cursor:url(Images/Cursor.png), auto;
+}
+
+.sidebar-items-container{
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem 1rem 1.25rem;
+  transition: all 0.2s ease-in-out;
+  width: 130px;
+  margin-bottom: 0.75rem;
+  border-radius: 1rem;
+  cursor: url(Images/Cursor.png), auto;
+}
+.sidebar-items-container:hover{
+  background: linear-gradient(120deg, #0D0D0D, #141414, #1C1C1C, #242424, #202020);
+
+}
+.sidebar-items-container:active{
+  color: #202020;
+  transform: scale(0.98);
+  background: linear-gradient(120deg, #0D0D0D, #141414, #1C1C1C, #242424, #202020);
+}
+
+.sidebar-items{
+  font-size: 1.5rem;
+}
+
+.h1-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.text-style{
+  font-size: 10px;
+  margin-left: 0.75rem;
+  cursor: pointer;
+}
+
+.tools h1{
+  margin: 0;
+}
+
+.tools{
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-items {
+  font-size: 1.5rem;
+}
+
+.projects-items-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 150px;
+  margin-top: 2.25rem;
+  cursor: pointer;
+  padding: 1rem 0.25rem 1rem 0.25rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  cursor:url(Images/Cursor.png), auto;
+}
+.projects-items-container::after{
+  content: '';
+  height: 1px;
+  width: 100%;
+  background-color: #EBEBEB;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.projects-items-container:hover::after{
+  opacity: 1;
+}
+
+.adjust{
+  font-size: 0.75rem;
+}
+
+.hightlight-text{
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 480px){
+
+  .parent{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .profile, .quote{
+    flex: 4;
+  }
+  .wallpaper{
+    flex: 1;
+  }
+  .grid{
+    grid-template-areas:
+    'wallpaper wallpaper wallpaper wallpaper'
+    'quote quote quote quote'
+    'profile profile profile profile'
+    'tools tools tools tools' 
+    'tools tools tools tools' 
+    'tools tools tools tools';
+    margin: 1.5rem;
+    row-gap: 0.75rem;
+  }
+
+  .profile-parent, .tools{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    margin: 0;
+  }
+
+  .socials-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .sidebar{
+    width: 160px;
+    min-width: 160px;
+  }
+  .sidebar-items-container{
+    display: flex;
+  }
+  .sidebar-items-container:hover{
+    background: none;
+  }
+
+}
